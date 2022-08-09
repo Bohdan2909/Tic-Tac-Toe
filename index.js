@@ -28,6 +28,12 @@ statusDispaly.innerHTML = currentPlayerTurn();
 function handleCellPLayed(clickedCell, clickedCellIndex) {
   gameState[clickedCellIndex] = currentPlayer;
   clickedCell.innerHTML = currentPlayer;
+      if (currentPlayer == "X") {
+        document.querySelectorAll('.cell')[clickedCellIndex].style.color = "blue";
+      } else {
+        document.querySelectorAll('.cell')[clickedCellIndex].style.color = "red";
+      }
+      
 }
 
 function handlePlayerChange() {
